@@ -98,5 +98,6 @@ def train():
                 saver.save(sess, checkpoint_dir+'model.ckpt', global_step=step+1)
             step += 1
 
+# 这个不能少！否则test.py中“from mnist_rnn import RNN, weights, biases”会导致本文件运行一遍！
 if __name__ == '__main__':
     train()
